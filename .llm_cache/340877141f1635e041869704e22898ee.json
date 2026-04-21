@@ -1,0 +1,8 @@
+{
+  "consume_k": 80.57548088183023,
+  "human_svc_share": 0.15,
+  "auto_goods_share": 0.85,
+  "borrow": false,
+  "borrow_k": 0.0,
+  "reasoning": "My income continues its decline, but my accumulated wealth provides a buffer. I will slightly increase my consumption fraction to stabilize absolute spending, while still avoiding new debt in this uncertain market."
+}

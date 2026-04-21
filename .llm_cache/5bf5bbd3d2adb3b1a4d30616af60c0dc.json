@@ -1,0 +1,8 @@
+{
+  "consume_k": 0.0,
+  "human_svc_share": 0.05,
+  "auto_goods_share": 0.95,
+  "borrow": false,
+  "borrow_k": 0.0,
+  "reasoning": "With no compute dividend and UBI remaining very low, I must consume all of my income to cover basic living expenses, leaving only a negligible amount for human services."
+}

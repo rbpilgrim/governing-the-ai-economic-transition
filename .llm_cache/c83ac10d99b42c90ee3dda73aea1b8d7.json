@@ -1,0 +1,8 @@
+{
+  "consume_k": 80.52622711787942,
+  "human_svc_share": 0.15,
+  "auto_goods_share": 0.85,
+  "borrow": false,
+  "borrow_k": 0.0,
+  "reasoning": "My income continues to decline, but my accumulated wealth allows me to maintain my absolute consumption levels by increasing the consumption fraction. I will not borrow."
+}

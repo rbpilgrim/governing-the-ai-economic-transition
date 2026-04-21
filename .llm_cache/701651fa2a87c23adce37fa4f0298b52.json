@@ -1,0 +1,8 @@
+{
+  "consume_k": 0.0,
+  "human_svc_share": 0.0,
+  "auto_goods_share": 1.0,
+  "borrow": false,
+  "borrow_k": 0.0,
+  "reasoning": "With no income from the compute dividend or other sources, and no existing wealth, there is no income to allocate or consume this year. Therefore, no spending or borrowing is possible."
+}

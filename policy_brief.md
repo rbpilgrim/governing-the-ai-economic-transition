@@ -81,18 +81,20 @@ Full model construction, baseline calibration, sector price dynamics, MPC tables
 
 ### 4.1 The economy pivots in composition, not in size
 
-Real output grows strongly while nominal GDP also grows — from $30T in 2026 to $37T by 2036 and $47T by 2046. This result reflects three offsetting mechanisms against knowledge-sector deflation:
+Real output grows strongly while nominal GDP also grows — from ~$30T in 2026 to ~$33T by 2036 and ~$42T by 2046. This result reflects three offsetting mechanisms against knowledge-sector deflation:
+
+**Scenario: Fast automation (mid=5), concentrated ownership (yeomen=0), low tax (20%), full enforcement.**
 
 | Sector | 2026 | 2036 | 2046 |
 |---|---|---|---|
-| Nominal GDP (total) | $30T | $37T | $47T |
+| Nominal GDP (total) | ~$30T | ~$33T | ~$42T |
 | Real GDP index (2026=100) | 100 | 173 | 230 |
 | Knowledge sector | $9.2T | $10.5T | $12.7T |
 | Physical goods | $6.2T | $8.0T | $10.5T |
 | Energy sector | $1.1T | $2.0T | $2.8T |
 | Scarcity goods | $1.4T | $2.5T | $4.5T |
 
-*Fast automation, concentrated ownership, low tax scenario.*
+*Nominal GDP growth is broadly similar across ownership scenarios (within ~10% at t+10), because the automated sectors are identical across scenarios. The distributional divergence is in who receives the income, not in aggregate output.*
 
 Knowledge sector nominal output grows only modestly despite 85% automation by 2035, because price deflation (−8%/yr) partially offsets real productivity gains. Physical goods nominal output grows as Jevons demand surges offset deflation in the automatable 25% of cost, with the material floor preventing collapse. Energy grows through Phase 1 infrastructure investment, then transitions to Phase 2 cheap-energy-enabled Jevons backfire. Scarcity goods appreciate as the premium on provably-human output rises with inequality.
 
@@ -131,7 +133,7 @@ The pattern that appears most consistently across scenario configurations: how A
 *†Includes $55k/yr citizen compute dividend.*
 *Today's US Gini is approximately 0.41. All concentrated scenarios represent severe deterioration.*
 
-The mechanism is the MPC differential. For every $1 trillion shifted from concentrated capital to distributed income, approximately $530–600 billion of additional annual consumption is generated, sustaining demand, the human economy, and the VAT tax base. Under high-MPC distributed income, the economic system becomes self-reinforcing: more consumption → larger human economy → more labour demand → higher wages → more tax revenue → more redistribution. Under low-MPC concentrated income, the system does the opposite.
+The mechanism is the MPC differential. For every $1 trillion shifted from concentrated capital to distributed income, approximately $530–600 billion of additional annual consumption is generated, sustaining demand, the human economy, and the VAT tax base. Under high-MPC distributed income, the economic system becomes self-reinforcing: more consumption → larger human economy → more labour demand → higher wages → more tax revenue → more redistribution. Under low-MPC concentrated income, the system does the opposite. The model implements this as a dynamic Keynesian multiplier on the human economy: `1/(1 − MPC_worker × human_share_t)`, where `human_share_t` is the human economy's share of total GDP in that year. The multiplier is small in concentrated scenarios (~1.07) where the human economy shrinks, and rises in yeomen scenarios (~1.15–1.20) as the human economy expands — creating self-reinforcing divergence between ownership structures over time.
 
 #### The yeomen mechanism: Coase in reverse
 

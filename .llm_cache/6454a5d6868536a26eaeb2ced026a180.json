@@ -1,0 +1,8 @@
+{
+  "consume_k": 0.0,
+  "human_svc_share": 0.05,
+  "auto_goods_share": 0.95,
+  "borrow": true,
+  "borrow_k": 19.4,
+  "reasoning": "With zero income and existing debt obligations, I must borrow heavily to cover essential living costs and interest payments. All non-essential spending, particularly on human services, is cut to the absolute minimum."
+}

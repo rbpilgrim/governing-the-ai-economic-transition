@@ -17,7 +17,7 @@ The central distributional choice is between two ownership archetypes. In the **
 
 Seven structural findings follow from the scenario analysis.
 
-**1. The economy pivots in composition, not size.** Nominal GDP grows — from ~$30T in 2026 to ~$33T by 2036 and ~$42T by 2046 — because AI-driven deflation in knowledge work is offset by Jevons demand expansion in physical goods, real estate appreciation as automation unlocks previously marginal land, and rising premiums on irreducibly human services. The distributional problem is not economic contraction; it is that the income from growth accrues to capital owners.
+**1. Ownership structure determines whether GDP grows or contracts.** This is the model's strongest and most unexpected finding. In the distributed (yeomen) scenario, nominal GDP grows from ~$30T to ~$35T by 2036 and ~$45T by 2046. In the concentrated scenario, GDP declines to ~$24T by 2036. The mechanism is an endogenous investment feedback: concentrated ownership suppresses aggregate demand (low MPC), which reduces expected returns on automated capital, which causes actual deployment to fall below the technological frontier, which reduces output. Distributed ownership sustains demand, justifies full deployment, and generates the Jevons quantity-expansion effects that offset price deflation. Ownership is not just a distributive choice — it is a macroeconomic one.
 
 **2. The fiscal problem is instrument mismatch, not insolvency.** The tax base shifts from labour income (high-enforcement, withholding-based) to capital income (mobile, leakage-prone). A government relying on payroll taxes faces structural revenue erosion even as nominal GDP grows.
 
@@ -79,41 +79,41 @@ Full model construction, baseline calibration, sector price dynamics, MPC tables
 
 ## 4. Results
 
-### 4.1 The economy pivots in composition, not in size
+### 4.1 Ownership structure determines whether the economy grows or contracts
 
-Real output grows strongly while nominal GDP also grows — from ~$30T in 2026 to ~$33T by 2036 and ~$42T by 2046. This result reflects three offsetting mechanisms against knowledge-sector deflation:
+The model produces a result that did not exist in earlier macro-automation analyses: **nominal GDP trajectory diverges substantially across ownership scenarios**. In the distributed-ownership (yeomen) scenario, nominal GDP grows from ~$30T to ~$35T by 2036 and ~$45T by 2046. In the concentrated-ownership scenario, nominal GDP declines to ~$24T by 2036 before recovering slowly.
 
-**Scenario: Fast automation (mid=5), concentrated ownership (yeomen=0), low tax (20%), full enforcement.**
-
-| Sector | 2026 | 2036 | 2046 |
+| Scenario | 2026 | 2036 | 2046 |
 |---|---|---|---|
-| Nominal GDP (total) | ~$30T | ~$33T | ~$42T |
-| Real GDP index (2026=100) | 100 | 173 | 230 |
-| Knowledge sector | $9.2T | $10.5T | $12.7T |
-| Physical goods | $6.2T | $8.0T | $10.5T |
-| Energy sector | $1.1T | $2.0T | $2.8T |
-| Scarcity goods | $1.4T | $2.5T | $4.5T |
+| High yeomen / High tax | ~$30T | ~$35T | ~$45T |
+| Concentrated / High tax | ~$30T | ~$24T | ~$26T |
+| Concentrated / Low tax | ~$30T | ~$24T | ~$26T |
+| Public AI 90% | ~$30T | ~$34T | ~$41T |
 
-*Nominal GDP growth is broadly similar across ownership scenarios (within ~10% at t+10), because the automated sectors are identical across scenarios. The distributional divergence is in who receives the income, not in aggregate output.*
+*Fast automation (mid=5) for concentrated/yeomen scenarios; medium (mid=9) for public AI. All from the endogenous investment model.*
 
-Knowledge sector nominal output grows only modestly despite 85% automation by 2035, because price deflation (−8%/yr) partially offsets real productivity gains. Physical goods nominal output grows as Jevons demand surges offset deflation in the automatable 25% of cost, with the material floor preventing collapse. Energy grows through Phase 1 infrastructure investment, then transitions to Phase 2 cheap-energy-enabled Jevons backfire. Scarcity goods appreciate as the premium on provably-human output rises with inequality.
+The mechanism is the **demand-investment feedback loop**. When income is concentrated among low-MPC capital owners, aggregate demand for automated goods falls below the level required to justify expanding capacity to the technological frontier. Investment lags behind what the technology permits. Deployed capacity — and therefore actual output — runs below the S-curve ceiling. In the yeomen scenario, high-MPC distributed income sustains demand, justifying full deployment of technological potential and generating the Jevons quantity-expansion effects that offset price deflation in nominal terms.
 
-The structural tension is compositional: sectors generating labour income deflate in per-unit price even as real output grows, while low-labour sectors (energy, scarcity goods) capture a rising share of nominal GDP. This is a distribution problem, not a macroeconomic collapse. The fiscal corollary: the tax base does not shrink, but its composition shifts from labour income (high-enforcement, withholding-based) toward capital income (mobile, harder to collect). A government relying on payroll taxes faces structural revenue erosion even as total nominal GDP grows.
+This is a substantially stronger finding than the distributional arguments alone. Concentrated ownership does not simply redistribute the gains from AI — it reduces total output by suppressing the investment that would deploy AI's full productive potential. Ownership structure is not just a distributive choice; it is a macroeconomic one.
+
+Knowledge sector nominal output falls in concentrated scenarios because AI-driven deflation (−8–10%/yr initially) outruns the demand-constrained real expansion. Physical goods hold up better (material costs are less compressible; Jevons demand effects are larger). The human economy expands in both scenarios — absorbing displaced workers as demand for irreducibly human services grows — but at much lower wages in concentrated scenarios, where the wage-setting floor is anchored only to subsistence rather than rising UBI.
+
+The structural tension is compositional: sectors generating labour income deflate in per-unit price, while concentrated capital income does not sustain the consumption needed to offset this deflation. The fiscal corollary: in the concentrated/low-tax scenario, tax revenues fall below existing government spending commitments by t+10, producing a structural deficit that prevents any UBI payments — even as displaced workers are available and nominal capital income is enormous.
 
 ### 4.2 Fiscal capacity depends on tax base design, not nominal GDP
 
-Because nominal GDP grows, sovereign debt dynamics are manageable relative to earlier projections. Debt/GDP falls from ~1.2x in 2026 to ~0.9x by 2036 as the nominal economy expands. Interest payments at $1.53T/yr consume 9–17% of tax revenue by 2035 depending on scenario — a declining burden, not a spiralling one.
+Debt dynamics diverge sharply across scenarios. In the concentrated/low-tax scenario, GDP declines while debt compounds — Debt/GDP reaches 1.75x by t+10 and interest payments consume 29% of tax revenue, crowding out the redistribution that might otherwise cushion displacement. In the yeomen scenario, GDP growth and higher tax capacity compress debt to 0.50x by t+10.
 
 | Scenario | Debt/GDP t+10 | Interest % revenue t+10 | Fiscal space t+10 |
 |---|---|---|---|
-| No yeomen / Low tax | 0.93x | 17% | **−$0.5T** |
-| No yeomen / High tax | 0.90x | 9% | +$6.9T |
-| High yeomen / High tax | 0.91x | 12% | +$3.7T |
-| Public AI 90% | 0.93x | 32% | −$6.5T* |
+| Concentrated / Low tax | 1.75x | 29% | **−$1.7T** |
+| Concentrated / High tax | 1.00x | 19% | +$1.1T |
+| High yeomen / High tax | 0.50x | 14% | +$2.8T |
+| Public AI 90% | 1.48x | 26% | −$3.9T* |
 
-*\*Public AI negative fiscal space is not a crisis — the compute dividend of $55k/yr per adult bypasses the government budget entirely. Citizens are funded through a different channel.*
+*\*Public AI negative fiscal space is structural, not a crisis: compute dividends ($39k/yr per adult by t+10) bypass the government account, funding citizens directly. The government funds its operations from conventional taxes on the remaining private economy.*
 
-The concentrated low-tax scenario produces modestly negative fiscal space (−$0.5T) not because nominal GDP fell, but because a 20% effective capital tax rate on an economy where labour income is collapsing generates insufficient revenue. Conversely, the high-tax concentrated scenario generates +$6.9T surplus — adequate for large UBI transfers — but at the cost of highly concentrated market income (Gini 0.770) and without addressing the structural MPC problem that suppresses demand.
+The concentrated/low-tax scenario produces deeply negative fiscal space (−$1.7T) because declining GDP combined with a 20% capital tax rate generates less revenue than existing government obligations — before any UBI is considered. There is no fiscal room for redistribution, and debt/GDP spirals. The concentrated/high-tax scenario restores solvency (+$1.1T) but cannot overcome the structural MPC suppression that causes GDP to decline. The yeomen scenario achieves the best fiscal outcome because GDP growth and high-MPC income sustain both the tax base and consumer demand simultaneously.
 
 The practical finding: tax *instrument* design matters as much as tax *rate*. Land value taxes are enforcement-immune — land cannot be registered in the Cayman Islands. Data-centre energy levies are enforcement-immune — physical metering at a known location. VAT on AI-delivered services follows the consumer. Corporate income taxes on AI capital are not enforcement-immune — profit-shifting is already the primary avoidance mechanism, and AI makes it easier by making value more location-agnostic.
 
@@ -121,17 +121,16 @@ The practical finding: tax *instrument* design matters as much as tax *rate*. La
 
 The pattern that appears most consistently across scenario configurations: how AI capital is owned tends to matter more than how its income is subsequently taxed and redistributed. One caveat is important before reading the results: the high-yeoman scenarios are not purely emergent market outcomes. In a mature market with large corporate operators enjoying scale advantages in compute, energy procurement, and cost of capital, the natural Coasian equilibrium without policy intervention may still tilt toward concentration. The yeoman scenarios assume a supported equilibrium — subsidised capital access, fiscal code reform, and a conditional surtax backstop — as described in §6.3. The distributional superiority of the yeoman model is real, but it is the outcome of a coherent policy package, not spontaneous market fragmentation.
 
-| Scenario | Gini t+10 | Gini t+30 | Welfare t+10 |
-|---|---|---|---|
-| No yeomen / Low tax | 0.784 | 0.815 | $2k/yr |
-| No yeomen / High tax | 0.770 | 0.798 | $151k/yr* |
-| High yeomen / High tax | 0.439 | 0.446 | $73k/yr |
-| High yeomen / Tax reform | 0.433 | ~0.44 | $72k/yr |
-| Public AI 90% | 0.140 | 0.117 | $57k/yr† |
+| Scenario | Gini t+10 | Gini t+30 | Welfare t+10 | GDP t+10 |
+|---|---|---|---|---|
+| Concentrated / Low tax | 0.653 | 0.701 | $2k/yr | $24T ↓ |
+| Concentrated / High tax | 0.652 | 0.695 | $62k/yr | $24T ↓ |
+| High yeomen / High tax | 0.448 | 0.467 | $2k/yr† | $35T ↑ |
+| Public AI 90% | 0.235 | 0.174 | $39k/yr‡ | $34T ↑ |
 
-*\*Market income Gini. The high-tax concentrated scenario redistributes large surpluses but market income remains highly concentrated; Gini reflects pre-transfer income structure.*
-*†Includes $55k/yr citizen compute dividend.*
-*Today's US Gini is approximately 0.41. All concentrated scenarios represent severe deterioration.*
+*Market income Gini proxy. Today's US Gini is approximately 0.41; all concentrated scenarios represent severe deterioration.*
+*†Yeomen welfare is low in $k because fiscal surplus exists but nearly all displaced workers are employed in the human economy — welfare recipients are few and well-supported; the low figure reflects near-zero headcount, not low per-person payments.*
+*‡Includes citizen compute dividend ($39k/yr per adult by t+10 at 90% public AI).*
 
 The mechanism is the MPC differential. For every $1 trillion shifted from concentrated capital to distributed income, approximately $530–600 billion of additional annual consumption is generated, sustaining demand, the human economy, and the VAT tax base. Under high-MPC distributed income, the economic system becomes self-reinforcing: more consumption → larger human economy → more labour demand → higher wages → more tax revenue → more redistribution. Under low-MPC concentrated income, the system does the opposite. The model implements this as a dynamic Keynesian multiplier on the human economy: `1/(1 − MPC_worker × human_share_t)`, where `human_share_t` is the human economy's share of total GDP in that year. The multiplier is small in concentrated scenarios (~1.07) where the human economy shrinks, and rises in yeomen scenarios (~1.15–1.20) as the human economy expands — creating self-reinforcing divergence between ownership structures over time.
 

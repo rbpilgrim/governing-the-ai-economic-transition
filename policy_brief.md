@@ -59,12 +59,12 @@ The model is almost certainly wrong in its specifics. Macroeconomic models of st
 
 ### 4.1 Ownership structure determines whether the economy grows or contracts
 
-The model produces a result that did not exist in earlier macro-automation analyses: **nominal GDP trajectory diverges substantially across ownership scenarios**. In the distributed-ownership (yeomen) scenario, nominal GDP grows from ~$30T to ~$35T by 2036 and ~$45T by 2046. In the concentrated-ownership scenario, nominal GDP declines to ~$24T by 2036 before recovering slowly.
+The model produces a result that did not exist in earlier macro-automation analyses: **nominal GDP trajectory diverges substantially across ownership scenarios**. In the distributed-ownership (yeomen) scenario, nominal GDP grows from ~$30T to ~$35T by 2036 and ~$45T by 2046. In the concentrated/low-tax scenario, nominal GDP declines to ~$24T by 2036. The concentrated/high-tax scenario fares better (~$29T) because redistribution sustains demand; the yeomen scenario grows to ~$35T.
 
 | Scenario | 2026 | 2036 | 2046 |
 |---|---|---|---|
 | High yeomen / High tax | ~$30T | ~$35T | ~$45T |
-| Concentrated / High tax | ~$30T | ~$24T | ~$26T |
+| Concentrated / High tax | ~$30T | ~$29T | ~$36T |
 | Concentrated / Low tax | ~$30T | ~$24T | ~$26T |
 | Public AI 90% | ~$30T | ~$34T | ~$41T |
 
@@ -80,18 +80,18 @@ The structural tension is compositional: sectors generating labour income deflat
 
 ### 4.2 Fiscal capacity depends on tax base design, not nominal GDP
 
-Debt dynamics diverge sharply across scenarios. In the concentrated/low-tax scenario, GDP declines while debt compounds — Debt/GDP reaches 1.75x by t+10 and interest payments consume 29% of tax revenue, crowding out the redistribution that might otherwise cushion displacement. In the yeomen scenario, GDP growth and higher tax capacity compress debt to 0.50x by t+10.
+Debt dynamics diverge sharply across scenarios. In the concentrated/low-tax scenario, GDP declines while debt compounds — Debt/GDP reaches 1.75x by t+10 and interest payments consume 29% of tax revenue, crowding out the redistribution that might otherwise cushion displacement. In the yeomen scenario, GDP growth and higher tax capacity compress debt to 0.40x by t+10.
 
 | Scenario | Debt/GDP t+10 | Interest % revenue t+10 | Fiscal space t+10 |
 |---|---|---|---|
 | Concentrated / Low tax | 1.75x | 29% | **−$1.7T** |
-| Concentrated / High tax | 1.00x | 19% | +$1.1T |
-| High yeomen / High tax | 0.50x | 14% | +$2.8T |
-| Public AI 90% | 1.48x | 26% | −$3.9T* |
+| Concentrated / High tax | 0.49x | 13% | +$3.7T |
+| High yeomen / High tax | 0.40x | 13% | +$3.2T |
+| Public AI 90% | 1.51x | 27% | −$4.0T* |
 
 *\*Public AI negative fiscal space is structural, not a crisis: compute dividends ($39k/yr per adult by t+10) bypass the government account, funding citizens directly. The government funds its operations from conventional taxes on the remaining private economy.*
 
-The concentrated/low-tax scenario produces deeply negative fiscal space (−$1.7T) because declining GDP combined with a 20% capital tax rate generates less revenue than existing government obligations — before any UBI is considered. There is no fiscal room for redistribution, and debt/GDP spirals. The concentrated/high-tax scenario restores solvency (+$1.1T) but cannot overcome the structural MPC suppression that causes GDP to decline. The yeomen scenario achieves the best fiscal outcome because GDP growth and high-MPC income sustain both the tax base and consumer demand simultaneously.
+The concentrated/low-tax scenario produces deeply negative fiscal space (−$1.7T) because declining GDP combined with a 20% capital tax rate generates less revenue than existing government obligations — before any UBI is considered. There is no fiscal room for redistribution, and debt/GDP spirals. The concentrated/high-tax scenario restores solvency (+$3.7T) and achieves near-identical fiscal space to the yeomen scenario — but through a fundamentally different mechanism: forced redistribution from a declining GDP base, rather than the self-sustaining demand loop that generates the yeomen surplus. By t+20 the difference becomes structural: yeomen GDP continues growing, concentrated/high-tax GDP flattens as governance quality erodes the effective tax rate. The yeomen scenario achieves the better long-run outcome because GDP growth and high-MPC income sustain both the tax base and consumer demand simultaneously.
 
 The practical finding: tax *instrument* design matters as much as tax *rate*. Land value taxes are enforcement-immune — land cannot be registered in the Cayman Islands. Data-centre energy levies are enforcement-immune — physical metering at a known location. VAT on AI-delivered services follows the consumer. Corporate income taxes on AI capital are not enforcement-immune — profit-shifting is already the primary avoidance mechanism, and AI makes it easier by making value more location-agnostic.
 
@@ -104,12 +104,12 @@ The pattern that appears most consistently across scenario configurations: how A
 | Scenario | Gini t+10 | Gini t+30 | Welfare t+10 | GDP t+10 |
 |---|---|---|---|---|
 | Concentrated / Low tax | 0.653 | 0.701 | $2k/yr | $24T ↓ |
-| Concentrated / High tax | 0.652 | 0.695 | $62k/yr | $24T ↓ |
-| High yeomen / High tax | 0.448 | 0.467 | $2k/yr† | $35T ↑ |
+| Concentrated / High tax | 0.670 | 0.729 | $2k/yr | $29T → |
+| High yeomen / High tax | 0.418 | 0.431 | $2k/yr† | $35T ↑ |
 | Public AI 90% | 0.235 | 0.174 | $39k/yr‡ | $34T ↑ |
 
 *Market income Gini proxy. Today's US Gini is approximately 0.41; all concentrated scenarios represent severe deterioration.*
-*†Yeomen welfare is low in $k because fiscal surplus exists but nearly all displaced workers are employed in the human economy — welfare recipients are few and well-supported; the low figure reflects near-zero headcount, not low per-person payments.*
+*†Yeomen welfare is low because nearly all displaced workers are employed in the human economy at above-subsistence wages — welfare recipients are few. The fiscal surplus exists but is not needed for mass transfers.*
 *‡Includes citizen compute dividend ($39k/yr per adult by t+10 at 90% public AI).*
 
 The mechanism is the MPC differential. For every $1 trillion shifted from concentrated capital to distributed income, approximately $530–600 billion of additional annual consumption is generated, sustaining demand, the human economy, and the VAT tax base. Under high-MPC distributed income, the economic system becomes self-reinforcing: more consumption → larger human economy → more labour demand → higher wages → more tax revenue → more redistribution. Under low-MPC concentrated income, the system does the opposite. The model implements this as a dynamic Keynesian multiplier on the human economy: `1/(1 − MPC_worker × human_share_t)`, where `human_share_t` is the human economy's share of total GDP in that year. The multiplier is small in concentrated scenarios (~1.07) where the human economy shrinks, and rises in yeomen scenarios (~1.15–1.20) as the human economy expands — creating self-reinforcing divergence between ownership structures over time.
@@ -245,12 +245,12 @@ The practical implication for instrument design: the more likely political econo
 | High yeomen / Small nation | 0.421 | $62k/yr | +$0.8T | 1.09x | 17% |
 | High tax / Small nation | 0.701 | $2k/yr | −$0.2T | 1.23x | 19% |
 
-*\*The $5.9T annual fiscal surplus divided across displaced workers yields a capped UBI of $62k/yr — the model applies a $60k ceiling. Market income Gini remains 0.699 (essentially the same as low-tax concentrated); redistribution covers welfare needs on paper but does not address structural demand suppression, the MPC feedback loop, or the governance decay that erodes the institutional capacity to keep collecting it.*
+*\*Concentrated/high-tax generates a +$3.7T fiscal surplus, but net workers without income ≈ 0 (the human economy absorbs all displaced workers), so the UBI trigger does not fire. The surplus is undeployed — a structural gap in the model's redistribution mechanism. Market income Gini is 0.670, slightly worse than low-tax concentrated, because redistribution flows through government rather than changing market income structure.*
 *†Public AI 90% welfare of $45k/yr reflects the citizen compute dividend only; negative fiscal space (−$4.8T) means the state is funding the capital acquisition deficit. The model holds this constant; in practice the public infrastructure investment is front-loaded and the fiscal position improves as the asset generates returns.*
 
 **Three structural observations:**
 
-(1) High-tax concentrated and high-yeomen scenarios produce identical welfare at t+10 ($62k/yr) but through entirely different mechanisms. High-tax concentrated achieves this through fiscal redistribution ($5.9T surplus redistributed to displaced workers); high-yeomen achieves it through market income structure. The high-tax route is vulnerable to governance decay; the yeomen route is not. By t+20 the gap widens as concentrated-ownership governance erodes and the effective tax rate falls.
+(1) High-tax concentrated and high-yeomen scenarios produce similar fiscal surpluses at t+10 (+$3.7T and +$3.2T respectively) but through entirely different mechanisms. High-tax concentrated extracts from a declining GDP base via forced redistribution — and because the human economy absorbs all displaced workers, the surplus has no UBI recipient and sits undeployed. The yeomen surplus emerges from a growing GDP base and high-MPC market income. By t+20 the gap widens sharply as concentrated-ownership governance erodes and the effective tax rate falls; the yeomen economy continues to expand.
 
 (2) The small-nation high-yeomen scenario has nearly identical market Gini (0.421) to the large-bloc equivalent and positive fiscal space (+$0.8T) — a better outcome than small-nation high-tax (Gini 0.701, −$0.2T fiscal space). Distributed ownership is viable for small nations without large-bloc enforcement leverage; high capital tax rates are not. The enforcement gap finding is not symmetric across ownership structures.
 
@@ -542,7 +542,7 @@ Take the relationships, not the numbers. The model is a structured way to make a
 
 Three conclusions emerge from the scenario exercise.
 
-**In this model, the distributional problem is not about economic size — it is about economic composition.** Real output nearly doubles in a decade under fast automation. The nominal economy grows. The problem is that the income from that growth accrues to owners of AI and robotic capital, which the existing tax code was designed to collect from workers. Redistribution from concentrated capital income can cover welfare needs — the high-tax concentrated scenario shows this — but it does not address the structural suppression of demand, the MPC-driven feedback loop that shrinks the human economy, or the governance decay that erodes the institutions required to keep collecting. Ownership structure addresses all three simultaneously.
+**In this model, the distributional problem is not about economic size — it is about economic composition.** Real output nearly doubles in a decade under fast automation. The nominal economy grows. The problem is that the income from that growth accrues to owners of AI and robotic capital, which the existing tax code was designed to collect from workers. Redistribution from concentrated capital income generates fiscal surplus — the high-tax concentrated scenario shows this — but it does not address the structural suppression of demand, the MPC-driven feedback loop that shrinks the human economy, or the governance decay that erodes the institutions required to keep collecting. Ownership structure addresses all three simultaneously.
 
 **Build the institutional window before it closes.** The fiscal capacity to fund structural change — public compute infrastructure, cooperative capital pools, yeomen fiscal reform, commons governance frameworks — is greatest before 2035. Institutional capacity has not yet been eroded. Open-weight models exist. Coasian fragmentation toward independent operators is already beginning through market forces. Each year of delay simultaneously narrows the fiscal window, advances governance decay, and allows concentrated owners more time to convert economic position into political power. The political salience of the problem is weakest in precisely the period when action is most effective.
 
